@@ -34,7 +34,7 @@ class WeatherCheck(QtWidgets.QMainWindow):
                                      f'Влажность: {w.humidity}% \n'
                                      f'Скорость ветра: {w.wind()["speed"]} м/с ')
         except APIRequestError:
-            self.ui.textEdit.setText('Город не найден')
+            self.ui.textEdit.setText('Нет соединения')
         except NotFoundError:
             self.ui.textEdit.setText('Город не найден')
 
